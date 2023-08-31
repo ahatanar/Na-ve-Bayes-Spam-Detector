@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spam Detector</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+
+  <!-- Add your site or application content here -->
+  <header class="border_title header">Spam Detector <img src="images/spam.png" alt="dash" class="headerimg"/></header>
+
+  <div class="container">
+    <div class="nav">
+      <h3>&#10146; Dashboard<img src="images/dashboard.png" alt="dash" class="tinyimg"/></h3>
+      <a href="about.html">About<img src="images/info.png" alt="about" class="tinyimg"/></a>
+      <a href="readme.html">Read Me<img src="images/readme.png" alt="analysis" class="tinyimg" /></a>
+    </div>
+
+    <div class="dashboard">
+      <h2>Spam Analysis Dashboard</h2>
+      <p>The table below displays the results of our spam detection algorithm:</p>
+      <div class="table-container">
+      <table>
+        <thead>
+        <tr>
+          <th>File Name</th>
+
+          <th>Spam Probability</th>
+          <th>Class</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+      <img src="images/spama.png" alt="dash" class="performanceimg"/>
+  </div>
+
+  <div class="performance">
+    <h3>Performance of the model</h3>
+    <label for="accuracy">Accuracy:</label>
+    <input type="text" id="accuracy" name="accuracy" readonly>
+    <label for="precision">Precision:</label>
+    <input type="text" id="precision" name="precision" readonly><br>
+
+
+    <h3>Model Analysis</h3>
+    <label for="total">Total Files:</label>
+    <input type="text" id="total" name="total" readonly>
+    <label for="ham">Ham:</label>
+    <input type="text" id="ham" name="ham" readonly>
+    <label for="spam">Spam:</label>
+    <input type="text" id="spam" name="spam" readonly>
+  </div>
+</div>
+
+<footer class="border_title footer">Copyright OTUGuys 2023</footer>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+
+</html>

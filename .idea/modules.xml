@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+
+      <module fileurl="file://$PROJECT_DIR$/spamDetectorServer/spamDetector.iml" filepath="$PROJECT_DIR$/spamDetectorServer/spamDetector.iml" />
+
+      <module fileurl="file://$PROJECT_DIR$/.idea/w23-csci2020u-assignment01-gnanaseelan-rana-patel-syed.iml" filepath="$PROJECT_DIR$/.idea/w23-csci2020u-assignment01-gnanaseelan-rana-patel-syed.iml" />
+    </modules>
+  </component>
+</project>

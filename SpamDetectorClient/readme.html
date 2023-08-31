@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- Add your site or application content here -->
+<header class="border_title header">Spam Detector <img src="images/spam.png" alt="dash" class="headerimg"/></header>
+
+<div class="container">
+  <div class="nav">
+
+    <a href="index.html">DashBoard <img src="images/dashboard.png" alt="dash" class="tinyimg"/></a>
+    <a href="about.html">About <img src="images/info.png" alt="about" class="tinyimg"/></a>
+    <h3>&#10146; Read Me<img src="images/readme.png" alt="analysis" class="tinyimg" /></h3>
+
+  </div>
+
+  <div class="dashboard">
+    <h2>Assignment 1: Analysis of the Program</h2>
+    <h4>Course: CSCI 2020U: Software Systems Development and Integration</h4>
+    <br>
+
+    <div class="row">
+
+      <div class="column_read">
+        <div class="card">
+          <div class="container_team">
+            <br>
+            <h2>Algorithms Used:</h2>
+            <p class="title_team">Naive Bayes</p>
+            <p>Navie Bayes methods are a set of supervised learning algorithms based on applying Bayes' theorem with the “naive” assumption of conditional independence between every pair of features given the value of the class variable.</p>
+            <a href="#"><img src="images/naive_bayes.png" alt="Naive Bayes" class="large-image" /></a>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="column_read">
+        <div class="card">
+          <div class="container_team">
+            <br>
+            <h2>Equations Used:</h2>
+            <p class="title_team">Pr(W|S), Pr(W|H), Pr(S|W), Accuracy, Precision</p>
+            <p>Pr(W|S) = <sup>of spam files containing W</sup>/<sub>of spam files</sub> </p>
+            <p>Pr(W|H) = <sup>of ham files containing W</sup>/<sub>of ham files </sub> </p>
+            <p>Pr(S|W) = <sup>Pr(W|S)</sup>/<sub>Pr(W|S) + Pr(W|H)</sub> </p>
+            <p>Accuracy = <sup>numTruePositives + numTrueNegatives</sup>/<sub>numFiles</sub> </p>
+            <p>Precision = <sup>numTruePositives</sup>/<sub>numFalsePositives + numTruePositives</sub> </p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="column_read">
+        <div class="card">
+          <div class="container_team">
+            <br>
+            <h2>Efficiency of Program:</h2>
+            <p class="title_team">O(N * L * log(N * L)) and O(N * L + M)</p>
+            <p>The time and space complexity of the SpamDetector class is O(N * L * log(N * L)) and O(N * L + M), respectively, where N is the total number of files in the training and test set, L is the length of the longest file, and M is the number of distinct words in the training set.</p>
+            <a href="#"><img src="images/time_complexity.png" alt="Time Complexity" class="read-image" /></a>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column_read">
+        <div class="card">
+          <div class="container_team">
+            <br>
+            <h2>Conclusion</h2>
+            <p class="title_team">In Conclusion we were able to build a very percise Spam detector with a percision of 98% however, with a lower accuracy of around 49%. To further Improve this Spam Detector, perhaps a different algorithim and learning model could be used, as well as perhaps consideration for non letter characters.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <a href="#"><img src="images/ontariotechu-logo.jpg" alt="Ontario Tech Univeristy" class="large-image" /></a>
+
+
+
+
+</div>
+
+<footer class="border_title footer">CopyWrite Winter 2023</footer>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
