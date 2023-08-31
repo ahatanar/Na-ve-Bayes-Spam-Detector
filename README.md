@@ -1,48 +1,67 @@
-# Assignment 01 - Spam Detector (Instructions)
+# Assignment 01 - Spam Detector (Secondary Instructions)
+
+> MEMBERS: Zainulabuddin Syed, Ashwin Gnanaseelan, Harsh Patel, Taha Rana
+
 > Course: CSCI 2020U: Software Systems Development and Integration
 
-This is the template for your Assignment 01.
+## Project information:
+The project involves building a spam detector using a dataset of emails to train the
+program to recognize whether new emails are spam or not. The program will use unigram
+approach to count each word's frequency and determine if an email is spam or not.
+First the user has a large collection of emails to train the system. It uses the "train"
+dataset to figure out the probability that an email is spam. Then we use the probability to test
+the "test" files.  Finally, we produce the results in a table format with the accuracy and precision.
+The picture below shows the analysis of all the test files with the spam probability.
+(You might have to zoom out to get the proper styling)
+![](img/image1.png)
+The picture belows shows the team members that worked on this project.
+![](img/image2.png)
 
-## Overview
-You have become frustrated with all the advertisements in your inbox. You resolve to create a spam detector to filter out the spam. The spam detector will use a dataset of E-Mails (spam or otherwise) to train your program to recognize whether or not new E-Mails are spam. The program will use a unigram approach [1], where each word is counted and associated with whether or not the message is spam. Your program will calculate probabilities based on each word’s frequency [2]. Luckily, you have not emptied your spam folder or inbox in quite a while, so you have many samples to use to train your system. 
+## Improvements
+* Creation of  HashSet to store the common words (the,and,at,or,a) since most exchange in the english language requires these words so any analysis done on them is
+  unnecessary  and in our opinion won't affect the likelihood of spam or not spam.
+* Utilizing exclamation marks in the regex. We chose to consider ! part of our words, as it is common knowledge that spam usually contains `!`
+  therefore utilizing this should make our models more accurate.
+* Setting the threshold to 0.66. We noticed that our precision improved significantly when raising the threshold of spam, and the accuracy stayed the same.
+  Therefore, we raised the threshold to match, and provide a more accurate modeling.
+## UI Improvements
+* Added a Model Analysis section on the Dashboard to show how many files were analyzed for the spam detector to show the user if the sample size is large enough
+* Added an improved Nav Section with Icons and another page. Also added images in the nav, an image below the chart for aesthetics, as well as the OTU logo. 
+* ReadMe page added to explain process of developing spam detector with elgorithms used, equations used, efficiency of the program, and conclusions. Showing the overall though process, learning objectives, and conclusions draw.
 
-- Check the `Canvas/Assingments/Assignment 01` for more the detailed instructions.
+## Brainstormed Improvements to be made
+* Improvements to be made to the algorithm is better analysis of non letter characters, with numbers, and other symbols, as that is a known common attribute of spam.
+* Additionally giving more weight to certain words such as "Free", "Deal",and "Limited", as these are often associated with spam emails.
+* Finally analysis of email lengths could also be done, to determine if there is a correlation between email size such as word count or character count.
 
-### SpamDetectorServer - Endpoints
+## How to run (Instructions)
+* Git clone the repo
+* Open the folder through intellij
+* Navigate to Edit configuration and add Glassfish Local
+* Go to deployment -> Artifact -> war exploded
+* Go back to the server and change URL by adding api/spam
+* Set the server domain to 'domain1'
+* Apply the changes and click OK.
+* Then go to the `SpamResourse.java` file and run it through the glass fish server
+* Wait for it to load and then run the index.html file
 
-**Listing all the test files**
 
-This will return a `application/json` content type.
-- `http://localhost:8080/spamDetector-1.0/api/spam`
-See a sample of the response data:
+
+##  Resources
+#### SpamDetector.java Libraries
 ```
-[{"spamProbRounded":"0.00000","file":"00006.654c4ec7c059531accf388a807064363","spamProbability":5.901245803391957E-62,"actualClass":"Ham"},{"spamProbRounded":"0.00000","file":"00007.2e086b13730b68a21ee715db145522b9","spamProbability":2.800348071907053E-12,"actualClass":"Ham"},{"spamProbRounded":"0.00000","file":"00008.6b73027e1e56131377941ff1db17ff12","spamProbability":8.66861037294167E-14,"actualClass":"Ham"},{"spamProbRounded":"0.00000","file":"00009.13c349859b09264fa131872ed4fb6e4e","spamProbability":6.947265471550557E-12,"actualClass":"Ham"},{"spamProbRounded":"0.00000","file":"00010.d1b4dbbad797c5c0537c5a0670c373fd","spamProbability":1.8814467288977145E-7,"actualClass":"Ham"},{"spamProbRounded":"0.00039","file":"00011.bc1aa4dca14300a8eec8b7658e568f29","spamProbability":3.892844289937937E-4,"actualClass":"Ham"}]
+* import com.spamdetector.domain.TestFile; 
+* import com.spamdetector.util.SpamDetector;
+* import jakarta.ws.rs.GET;
+* import jakarta.ws.rs.Path;
+* import jakarta.ws.rs.Produces;
+* import java.io.File;
+* import java.io.IOException;
+* import java.net.URISyntaxException;
+* import java.net.URL;
+* import java.util.List;
+* import java.util.Map;
+* import jakarta.ws.rs.core.Response;
+* import com.fasterxml.jackson.databind.ObjectMapper;
 ```
 
-**Calculate and get accuracy**
-This will return a `application/json` content type.
-- `http://localhost:8080/spamDetector-1.0/api/spam/accuracy`
-See a sample of the response data:
-```
-{"val": 0.87564}
-```
-
-**Calculate and get precision**
-This will return a `application/json` content type.
-- `http://localhost:8080/spamDetector-1.0/api/spam/precision`
-See a sample of the response data:
-```
-{"val": 0.56484}
-```
-### SpamDetectorServer - SpamDetector class
-
-Most of your programming will be in the `SpamDetector` class. This class will be responsible for reading the testing and training data files, training, and tesing the model.
-
-> Obs1. Feel free to create other helper classes as you see fit.
-> 
-> Obs2. You are not expected to get the exact same values as the ones shown in the samples.
-
-### References 
-[1] https://en.wikipedia.org/wiki/Bag-of-words_model 
-
-[2] https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering 
