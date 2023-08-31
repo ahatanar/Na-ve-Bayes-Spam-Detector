@@ -13,9 +13,9 @@ dataset to figure out the probability that an email is spam. Then we use the pro
 the "test" files.  Finally, we produce the results in a table format with the accuracy and precision.
 The picture below shows the analysis of all the test files with the spam probability.
 (You might have to zoom out to get the proper styling)
-![](img/image1.png)
+![](static/image1.png)
 The picture belows shows the team members that worked on this project.
-![](img/image2.png)
+![](static/image2.png)
 
 ## Improvements
 * Creation of  HashSet to store the common words (the,and,at,or,a) since most exchange in the english language requires these words so any analysis done on them is
